@@ -3,9 +3,6 @@
 		"src/routes/+layout.ts",
 		"src/routes/+layout.ts"
 	],
-	"/api/anfrage": [
-		"src/routes/api/anfrage/+server.ts"
-	],
 	"/kontakt": [
 		"src/routes/+layout.ts"
 	],

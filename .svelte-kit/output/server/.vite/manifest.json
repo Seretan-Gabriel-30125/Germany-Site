@@ -172,12 +172,6 @@
       "_services.js"
     ]
   },
-  "src/routes/api/anfrage/+server.ts": {
-    "file": "entries/endpoints/api/anfrage/_server.ts.js",
-    "name": "entries/endpoints/api/anfrage/_server.ts",
-    "src": "src/routes/api/anfrage/+server.ts",
-    "isEntry": true
-  },
   "src/routes/kontakt/+page.svelte": {
     "file": "entries/pages/kontakt/_page.svelte.js",
     "name": "entries/pages/kontakt/_page.svelte",
