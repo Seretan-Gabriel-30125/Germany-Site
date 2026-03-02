@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/api/anfrage": [
+		"src/routes/api/anfrage/+server.ts"
+	],
+	"/kontakt": [
+		"src/routes/+layout.ts"
+	],
+	"/leistungen": [
+		"src/routes/+layout.ts"
+	],
+	"/projekte": [
+		"src/routes/+layout.ts"
+	]
+}
