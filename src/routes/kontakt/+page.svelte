@@ -4,9 +4,9 @@
   import Icon from '$lib/components/Icon.svelte';
 
   const brand = {
-    name: 'Maler- & Reinigungsservice',
-    phone: '+49 000 000000', // TODO
-    whatsapp: '+49 000 000000', // TODO
+    name: 'AD HAUSSANIERUNG',
+    phone: '+49 155 11501468', // TODO
+    whatsapp: '+49 155 11501468', // TODO
     email: 'info@DEINE-DOMAIN.de', // TODO
     area: 'Augsburg / München & Umgebung'
   };

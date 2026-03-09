@@ -5,9 +5,9 @@
   import WhatsAppFab from '$lib/components/WhatsAppFab.svelte';
 
   const brand = {
-    name: 'Maler- & Reinigungsservice',
-    phone: '+49 000 000000', // TODO
-    whatsapp: '+49 000 000000' // TODO
+    name: 'AD HAUSSANIERUNG',
+    phone: '+49 155 11501468', // TODO
+    whatsapp: '+49 155 11501468' // TODO
   };
 </script>
 

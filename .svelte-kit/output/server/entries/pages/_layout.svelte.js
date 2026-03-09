@@ -84,10 +84,10 @@ function WhatsAppFab($$renderer, $$props) {
 }
 function _layout($$renderer, $$props) {
   const brand = {
-    name: "Maler- & Reinigungsservice",
-    phone: "+49 000 000000",
+    name: "AD HAUSSANIERUNG",
+    phone: "+49 155 11501468",
     // TODO
-    whatsapp: "+49 000 000000"
+    whatsapp: "+49 155 11501468"
     // TODO
   };
   $$renderer.push(`<div class="min-h-screen flex flex-col">`);

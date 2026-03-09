@@ -42,9 +42,9 @@ function ContactForm($$renderer, $$props) {
 }
 function _page($$renderer) {
   const brand = {
-    phone: "+49 000 000000",
+    phone: "+49 155 11501468",
     // TODO
-    whatsapp: "+49 000 000000",
+    whatsapp: "+49 155 11501468",
     // TODO
     email: "info@DEINE-DOMAIN.de",
     // TODO

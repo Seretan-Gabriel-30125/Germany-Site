@@ -44,8 +44,8 @@ function ServiceGrid($$renderer, $$props) {
 }
 function _page($$renderer) {
   const brand = {
-    name: "Maler- & Reinigungsservice",
-    whatsapp: "+49 000 000000"
+    name: "AD HAUSSANIERUNG",
+    whatsapp: "+49 155 11501468"
   };
   const canonical = "https://DEINE-DOMAIN.de/";
   head("1uha8ag", $$renderer, ($$renderer2) => {
