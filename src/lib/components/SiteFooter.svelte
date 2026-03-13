@@ -4,12 +4,12 @@
   const year = new Date().getFullYear();
 </script>
 
-<footer class="border-t border-slate-200 bg-white">
-  <div class="mx-auto max-w-6xl px-4 py-10">
-    <div class="grid gap-8 md:grid-cols-3">
+<footer class="px-4 pb-6 pt-10">
+  <div class="section-shell mx-auto max-w-7xl overflow-hidden">
+    <div class="grid gap-8 px-6 py-8 md:grid-cols-3 md:px-8 md:py-10">
       <div class="space-y-3">
-        <div class="text-lg font-semibold">{brand.name}</div>
-        <p class="text-sm text-slate-600">Fassaden • Dach • Pflaster • Holz • Steinteppich — sauber, modern, langlebig.</p>
+        <div class="font-display text-2xl text-slate-950">{brand.name}</div>
+        <p class="text-sm leading-7 text-slate-600">Dachsanierung, Fassadenanstrich, Steinteppich und weitere Leistungen rund ums Haus. Modern präsentiert, schnell erreichbar und klar strukturiert.</p>
       </div>
 
       <div class="space-y-3">
@@ -30,9 +30,9 @@
       </div>
     </div>
 
-    <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+    <div class="flex flex-col gap-2 border-t border-sand-300 px-6 py-5 text-xs text-slate-500 md:flex-row md:items-center md:justify-between md:px-8">
       <div>© {year} {brand.name}. Alle Rechte vorbehalten.</div>
-      <div class="opacity-80">Made with SvelteKit.</div>
+      <div class="opacity-80">Designed for modern mobile-first browsing.</div>
     </div>
   </div>
 </footer>

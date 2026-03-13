@@ -41,17 +41,17 @@ function SiteHeader($$renderer, $$props) {
     ];
     let open = false;
     path = store_get($$store_subs ??= {}, "$page", page).url.pathname;
-    $$renderer2.push(`<header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur"><div class="mx-auto max-w-6xl px-4"><div class="flex h-16 items-center justify-between gap-4"><a href="/" class="flex items-center gap-2 font-semibold tracking-tight"><span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900 text-white">DE</span> <span class="hidden sm:block">${escape_html(brand.name)}</span> <span class="sm:hidden">Service</span></a> <nav class="hidden md:flex items-center gap-1"><!--[-->`);
+    $$renderer2.push(`<header class="sticky top-0 z-50 px-4 pt-3"><div class="mx-auto max-w-7xl"><div class="section-shell flex min-h-[4.5rem] items-center justify-between gap-4 px-4 py-3 md:px-5"><a href="/" class="flex items-center gap-3 font-semibold tracking-tight"><span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 font-display text-sm text-white">AD</span> <span class="hidden sm:block"><span class="block text-sm font-semibold text-slate-950">${escape_html(brand.name)}</span> <span class="block text-[11px] uppercase tracking-[0.2em] text-slate-500">Haus Sanierung</span></span> <span class="sm:hidden">Service</span></a> <nav class="hidden md:flex items-center gap-1"><!--[-->`);
     const each_array = ensure_array_like(nav);
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let item = each_array[$$index];
-      $$renderer2.push(`<a${attr("href", item.href)}${attr_class(`rounded-xl px-3 py-2 text-sm font-medium transition ${stringify(path === item.href ? "bg-slate-900 text-white" : "text-slate-700 hover:bg-slate-100")}`)}>${escape_html(item.label)}</a>`);
+      $$renderer2.push(`<a${attr("href", item.href)}${attr_class(`rounded-xl px-3 py-2 text-sm font-medium transition ${stringify(path === item.href ? "bg-slate-950 text-white shadow-lg shadow-slate-950/10" : "text-slate-700 hover:bg-sand-100")}`)}>${escape_html(item.label)}</a>`);
     }
-    $$renderer2.push(`<!--]--></nav> <div class="hidden md:flex items-center gap-2"><a${attr("href", "tel:" + brand.phone)} class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50">`);
+    $$renderer2.push(`<!--]--></nav> <div class="hidden md:flex items-center gap-2"><a${attr("href", "tel:" + brand.phone)} class="inline-flex items-center gap-2 rounded-xl border border-sand-300 px-3 py-2 text-sm font-medium text-slate-800 hover:bg-sand-50">`);
     Icon($$renderer2, { name: "phone", className: "h-4 w-4" });
-    $$renderer2.push(`<!----> ${escape_html(brand.phone)}</a> <a${attr("href", "https://wa.me/" + brand.whatsapp.replace(/\D/g, ""))} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">`);
+    $$renderer2.push(`<!----> ${escape_html(brand.phone)}</a> <a${attr("href", "https://wa.me/" + brand.whatsapp.replace(/\D/g, ""))} target="_blank" rel="noopener" class="inline-flex min-w-[9.5rem] items-center justify-center gap-2 rounded-xl border border-[#1da851]/30 bg-[#25D366] px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-[#25D366]/25 transition hover:-translate-y-0.5 hover:bg-[#1fbe5b]">`);
     Icon($$renderer2, { name: "whatsapp", className: "h-4 w-4" });
-    $$renderer2.push(`<!----> WhatsApp</a></div> <button class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200" aria-label="Menü"${attr("aria-expanded", open)}><span class="text-xl">${escape_html("☰")}</span></button></div> `);
+    $$renderer2.push(`<!----> WhatsApp</a></div> <button class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-sand-300 bg-white" aria-label="Menü"${attr("aria-expanded", open)}><span class="text-xl">${escape_html("☰")}</span></button></div> `);
     {
       $$renderer2.push("<!--[!-->");
     }
@@ -64,20 +64,20 @@ function SiteFooter($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let brand = $$props["brand"];
     const year = (/* @__PURE__ */ new Date()).getFullYear();
-    $$renderer2.push(`<footer class="border-t border-slate-200 bg-white"><div class="mx-auto max-w-6xl px-4 py-10"><div class="grid gap-8 md:grid-cols-3"><div class="space-y-3"><div class="text-lg font-semibold">${escape_html(brand.name)}</div> <p class="text-sm text-slate-600">Fassaden • Dach • Pflaster • Holz • Steinteppich — sauber, modern, langlebig.</p></div> <div class="space-y-3"><div class="text-sm font-semibold text-slate-900">Kontakt</div> <div class="grid gap-2 text-sm text-slate-700"><a class="inline-flex items-center gap-2 hover:underline"${attr("href", "tel:" + brand.phone)}>`);
+    $$renderer2.push(`<footer class="px-4 pb-6 pt-10"><div class="section-shell mx-auto max-w-7xl overflow-hidden"><div class="grid gap-8 px-6 py-8 md:grid-cols-3 md:px-8 md:py-10"><div class="space-y-3"><div class="font-display text-2xl text-slate-950">${escape_html(brand.name)}</div> <p class="text-sm leading-7 text-slate-600">Dachsanierung, Fassadenanstrich, Steinteppich und weitere Leistungen rund ums Haus. Modern präsentiert, schnell erreichbar und klar strukturiert.</p></div> <div class="space-y-3"><div class="text-sm font-semibold text-slate-900">Kontakt</div> <div class="grid gap-2 text-sm text-slate-700"><a class="inline-flex items-center gap-2 hover:underline"${attr("href", "tel:" + brand.phone)}>`);
     Icon($$renderer2, { name: "phone", className: "h-4 w-4" });
     $$renderer2.push(`<!----> ${escape_html(brand.phone)}</a> <a class="inline-flex items-center gap-2 hover:underline"${attr("href", "https://wa.me/" + brand.whatsapp.replace(/\D/g, ""))} target="_blank" rel="noopener">`);
     Icon($$renderer2, { name: "whatsapp", className: "h-4 w-4" });
     $$renderer2.push(`<!----> WhatsApp Chat</a> <a class="inline-flex items-center gap-2 hover:underline" href="/kontakt">`);
     Icon($$renderer2, { name: "pin", className: "h-4 w-4" });
-    $$renderer2.push(`<!----> Augsburg / München &amp; Umgebung</a></div></div> <div class="space-y-3"><div class="text-sm font-semibold text-slate-900">Rechtliches</div> <div class="grid gap-2 text-sm text-slate-700"><a class="hover:underline" href="/kontakt#impressum">Impressum</a> <a class="hover:underline" href="/kontakt#datenschutz">Datenschutz</a></div></div></div> <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between"><div>© ${escape_html(year)} ${escape_html(brand.name)}. Alle Rechte vorbehalten.</div> <div class="opacity-80">Made with SvelteKit.</div></div></div></footer>`);
+    $$renderer2.push(`<!----> Augsburg / München &amp; Umgebung</a></div></div> <div class="space-y-3"><div class="text-sm font-semibold text-slate-900">Rechtliches</div> <div class="grid gap-2 text-sm text-slate-700"><a class="hover:underline" href="/kontakt#impressum">Impressum</a> <a class="hover:underline" href="/kontakt#datenschutz">Datenschutz</a></div></div></div> <div class="flex flex-col gap-2 border-t border-sand-300 px-6 py-5 text-xs text-slate-500 md:flex-row md:items-center md:justify-between md:px-8"><div>© ${escape_html(year)} ${escape_html(brand.name)}. Alle Rechte vorbehalten.</div> <div class="opacity-80">Designed for modern mobile-first browsing.</div></div></div></footer>`);
     bind_props($$props, { brand });
   });
 }
 function WhatsAppFab($$renderer, $$props) {
   let phone = $$props["phone"];
   const clean = (v) => v.replace(/\D/g, "");
-  $$renderer.push(`<a${attr("href", "https://wa.me/" + clean(phone))} target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 active:scale-[0.99]" aria-label="WhatsApp">`);
+  $$renderer.push(`<a${attr("href", "https://wa.me/" + clean(phone))} target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-pine-700 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-pine-900/20 transition hover:-translate-y-0.5 hover:bg-pine-800 active:scale-[0.99]" aria-label="WhatsApp">`);
   Icon($$renderer, { name: "whatsapp", className: "h-5 w-5" });
   $$renderer.push(`<!----> <span class="hidden sm:block">WhatsApp</span></a>`);
   bind_props($$props, { phone });

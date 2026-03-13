@@ -37,56 +37,59 @@
     }
   }
 
-  const wa = "https://wa.me/" + clean(whatsapp);
+const wa = "https://wa.me/" + clean(whatsapp);
 </script>
 
-<form on:submit={onSubmit} class="grid gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" id="anfrage">
+<form on:submit={onSubmit} class="section-shell grid gap-4 p-6 md:p-7" id="anfrage">
   <div class="grid gap-4 md:grid-cols-2">
     <label class="grid gap-1">
       <span class="text-sm font-semibold">Name</span>
-      <input name="name" required class="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-slate-400" />
+      <input name="name" required class="rounded-2xl border border-sand-300 bg-white px-4 py-3 outline-none transition focus:border-clay-500" />
     </label>
 
     <label class="grid gap-1">
       <span class="text-sm font-semibold">Telefon</span>
-      <input name="phone" required class="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-slate-400" />
+      <input name="phone" required class="rounded-2xl border border-sand-300 bg-white px-4 py-3 outline-none transition focus:border-clay-500" />
     </label>
 
     <label class="grid gap-1 md:col-span-2">
       <span class="text-sm font-semibold">E‑Mail (optional)</span>
-      <input name="email" type="email" class="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-slate-400" />
+      <input name="email" type="email" class="rounded-2xl border border-sand-300 bg-white px-4 py-3 outline-none transition focus:border-clay-500" />
     </label>
 
     <label class="grid gap-1 md:col-span-2">
       <span class="text-sm font-semibold">Leistung</span>
-      <select name="service" required class="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-slate-400">
+      <select name="service" required class="rounded-2xl border border-sand-300 bg-white px-4 py-3 outline-none transition focus:border-clay-500">
         <option value="">Bitte wählen…</option>
-        <option>Fassaden streichen</option>
-        <option>Dachreinigung</option>
-        <option>Pflaster reinigen</option>
-        <option>Holz streichen</option>
+        <option>Kostenlose Beratung</option>
+        <option>Dachsanierung</option>
+        <option>Flachdachsanierung</option>
+        <option>Fassadenanstrich und Reinigung</option>
+        <option>Mauertrockenlegung</option>
+        <option>Holzanstriche</option>
+        <option>Spezialverfugung</option>
         <option>Steinteppich</option>
       </select>
     </label>
 
     <label class="grid gap-1 md:col-span-2">
       <span class="text-sm font-semibold">Nachricht</span>
-      <textarea name="message" rows="5" required class="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-slate-400"></textarea>
+      <textarea name="message" rows="5" required class="rounded-2xl border border-sand-300 bg-white px-4 py-3 outline-none transition focus:border-clay-500"></textarea>
     </label>
   </div>
 
   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-    <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-60" disabled={status === 'sending'}>
+    <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-900 disabled:opacity-60" disabled={status === 'sending'}>
       {status === 'sending' ? 'Senden…' : 'Anfrage senden'}
     </button>
 
-    <a href={wa} target="_blank" rel="noopener" class="text-sm font-semibold text-emerald-700 hover:underline">
+    <a href={wa} target="_blank" rel="noopener" class="text-sm font-semibold text-pine-700 hover:underline">
       oder direkt per WhatsApp schreiben →
     </a>
   </div>
 
   {#if status === 'success'}
-    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
+    <div class="rounded-2xl border border-pine-200 bg-pine-50 px-4 py-3 text-sm text-pine-900">
       Danke! Wir melden uns schnellstmöglich.
     </div>
   {/if}

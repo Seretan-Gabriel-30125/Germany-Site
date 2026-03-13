@@ -40,7 +40,8 @@
     "file": "chunks/gallery.js",
     "name": "gallery",
     "imports": [
-      "_index2.js"
+      "_index2.js",
+      "_Section.js"
     ]
   },
   "_index.js": {
@@ -150,7 +151,7 @@
       "_state.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.C0kQBhXY.css"
+      "_app/immutable/assets/_layout.DlN5dHbv.css"
     ]
   },
   "src/routes/+layout.ts": {
@@ -166,8 +167,8 @@
     "isEntry": true,
     "imports": [
       "_index2.js",
-      "_Icon.js",
       "_Section.js",
+      "_Icon.js",
       "_gallery.js",
       "_services.js"
     ]

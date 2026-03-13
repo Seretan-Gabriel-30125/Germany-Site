@@ -2,6 +2,7 @@
   import Section from '$lib/components/Section.svelte';
   import ContactForm from '$lib/components/ContactForm.svelte';
   import Icon from '$lib/components/Icon.svelte';
+  import Reveal from '$lib/components/Reveal.svelte';
 
   const brand = {
     name: 'AD HAUSSANIERUNG',
@@ -24,12 +25,13 @@
   <link rel="canonical" href={canonical} />
 </svelte:head>
 
-<Section title="Kontakt" subtitle="Schnelle Antwort – am liebsten per WhatsApp, alternativ per Formular.">
+<Section eyebrow="Kontakt" title="Schnelle Anfrage ohne Umwege." subtitle="Am besten per WhatsApp mit 2 bis 3 Fotos. Alternativ können Interessenten direkt hier die passende Leistung auswählen und eine Anfrage senden.">
   <div class="grid gap-6 lg:grid-cols-2">
     <ContactForm whatsapp={brand.whatsapp} {formspreeEndpoint} />
 
     <div class="space-y-4">
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <Reveal>
+        <div class="section-shell p-6">
         <div class="text-sm font-semibold text-slate-900">Direktkontakt</div>
 
         <div class="mt-4 grid gap-3 text-sm text-slate-700">
@@ -47,24 +49,25 @@
           </div>
         </div>
 
-        <div class="mt-6 rounded-2xl bg-slate-50 p-4 text-sm text-slate-700">
+        <div class="mt-6 rounded-2xl bg-sand-50 p-4 text-sm text-slate-700">
           Tipp: Für ein schnelles Angebot senden Sie bitte <b>2–3 Fotos</b> + kurze Maße / Adresse.
         </div>
-      </div>
+        </div>
+      </Reveal>
 
-      <div id="impressum" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm scroll-mt-24">
+      <Reveal id="impressum" className="section-shell scroll-mt-24 p-6" as="div">
         <div class="text-sm font-semibold text-slate-900">Impressum (Template)</div>
         <p class="mt-3 text-sm text-slate-600">
           Bitte hier die gesetzlichen Angaben eintragen (Name/Firma, Anschrift, Kontakt, USt-ID, etc.).
         </p>
-      </div>
+      </Reveal>
 
-      <div id="datenschutz" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm scroll-mt-24">
+      <Reveal id="datenschutz" className="section-shell scroll-mt-24 p-6" as="div">
         <div class="text-sm font-semibold text-slate-900">Datenschutz (Template)</div>
         <p class="mt-3 text-sm text-slate-600">
           Bitte Datenschutzerklärung ergänzen (Kontaktformular, Tracking, Hosting, Cookies).
         </p>
-      </div>
+      </Reveal>
     </div>
   </div>
 </Section>
